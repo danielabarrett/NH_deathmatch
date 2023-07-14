@@ -3,7 +3,7 @@ function warfare:ctf/reset
 function warfare:president/reset
 function warfare:one_rabbit/reset
 function warfare:one_hill/reset
-function warfare:two_hills/reset
+function warfare:two_zones/reset
 
 bossbar set timer visible false
 
