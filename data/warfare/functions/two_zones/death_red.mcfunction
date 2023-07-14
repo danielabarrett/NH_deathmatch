@@ -3,3 +3,4 @@ scoreboard players add BLUE killcount 1
 clear @s
 effect give @s levitation infinite 255 true
 scoreboard players operation @s clock = op_respawn_time option
+function warfare:two_zones/loadouts/choose

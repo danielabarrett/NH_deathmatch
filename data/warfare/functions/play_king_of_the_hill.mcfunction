@@ -1,4 +1,4 @@
-tellraw @s {"text":"Checking setup","color":"gold"}
+
 
 # scoreboard objectives add setup_counter dummy
 scoreboard players set setup_counter utility 0

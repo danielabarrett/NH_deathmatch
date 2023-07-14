@@ -5,18 +5,25 @@
 # setup players
 #
 
-execute as @a[scores={loadout_select=1,president=0},team=RED] run function warfare:deathmatch/loadouts/get_red_1
-execute as @a[scores={loadout_select=2,president=0},team=RED] run function warfare:deathmatch/loadouts/get_red_2
-execute as @a[scores={loadout_select=1,president=0},team=BLUE] run function warfare:deathmatch/loadouts/get_blue_1
-execute as @a[scores={loadout_select=2,president=0},team=BLUE] run function warfare:deathmatch/loadouts/get_blue_2
-execute as @a[team=RED,scores={president=1}] run function warfare:president/loadouts/get_red_president
-execute as @a[team=BLUE,scores={president=1}] run function warfare:president/loadouts/get_blue_president
+effect clear @a
+# execute as @a[scores={loadout_select=1,president=0},team=RED] run function warfare:deathmatch/loadouts/get_red_1
+# execute as @a[scores={loadout_select=2,president=0},team=RED] run function warfare:deathmatch/loadouts/get_red_2
+# execute as @a[scores={loadout_select=1,president=0},team=BLUE] run function warfare:deathmatch/loadouts/get_blue_1
+# execute as @a[scores={loadout_select=2,president=0},team=BLUE] run function warfare:deathmatch/loadouts/get_blue_2
+# execute as @a[team=RED,scores={president=1}] run function warfare:president/loadouts/get_red_president
+# execute as @a[team=BLUE,scores={president=1}] run function warfare:president/loadouts/get_blue_president
 execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run spawnpoint @a[team=RED,scores={president=0}] ~ ~100 ~
 execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE,scores={president=0}] ~ ~100 ~
 execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run spawnpoint @a[team=RED,scores={president=1}] ~ ~ ~
 execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE,scores={president=1}] ~ ~ ~
-execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run tp @a[team=RED] ~ ~ ~ ~ ~
-execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~ ~ ~ ~
+# execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run tp @a[team=RED] ~ ~ ~ ~ ~
+# execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~ ~ ~ ~
+execute as @a[team=RED,scores={president=0}] run function warfare:president/respawn_red
+execute as @a[team=BLUE,scores={president=0}] run function warfare:president/respawn_blue
+execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run tp @a[scores={president=1},team=RED] ~ ~ ~ ~ ~
+execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run tp @a[scores={president=1},team=BLUE] ~ ~ ~ ~ ~
+execute as @a[scores={president=1},team=RED] run function warfare:loadouts/get_red_president
+execute as @a[scores={president=1},team=BLUE] run function warfare:loadouts/get_blue_president
 
 
 #

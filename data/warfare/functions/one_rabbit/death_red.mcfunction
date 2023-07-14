@@ -5,3 +5,4 @@ clear @s
 effect give @s levitation infinite 255 true
 scoreboard players operation @s clock = op_respawn_time option
 scoreboard players set @a kill_detector 0
+function warfare:one_rabbit/loadouts/choose

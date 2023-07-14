@@ -63,5 +63,5 @@ execute as @e[type=armor_stand,name="zone_b"] at @e[type=armor_stand,name="zone_
 # loadout select
 #
 
-execute as @a unless score @s loadout_view = @s loadout_select run function warfare:two_zones/loadouts/update
+execute as @a[scores={loadout_equip=1..}] run function warfare:two_zones/loadouts/equip_current
 

@@ -12,5 +12,6 @@ scoreboard players set gamemode utility 0
 
 scoreboard objectives remove killcount
 scoreboard objectives remove flagcount
+scoreboard objectives remove points
 
 effect clear @a

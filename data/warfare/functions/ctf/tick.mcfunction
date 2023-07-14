@@ -80,4 +80,4 @@ execute if score second_detector clock matches 2 run function warfare:ctf/anti_s
 # loadout select
 #
 
-execute as @a unless score @s loadout_view = @s loadout_select run function warfare:ctf/loadouts/update
+execute as @a[scores={loadout_equip=1..}] run function warfare:ctf/loadouts/equip_current

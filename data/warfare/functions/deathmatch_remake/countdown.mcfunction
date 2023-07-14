@@ -1,4 +1,4 @@
-tellraw @s {"text":"Starting the game!","color":"gold"}
+
 
 # scoreboard players set GAME_CLOCK clock 0
 function warfare:_global/reset
@@ -19,7 +19,7 @@ effect give @a levitation infinite 255 true
 # teams
 #
 
-tellraw @s {"text":"Setting up teams!","color":"gold"}
+
 execute if score op_shuffle_teams option matches 1 run team leave @a
 execute if score op_shuffle_teams option matches 1 run team remove RED
 execute if score op_shuffle_teams option matches 1 run team remove BLUE
@@ -47,7 +47,7 @@ bossbar set timer value 100
 title @a times 0.1s 0.8s 0.1s
 scoreboard objectives add clock dummy {"text":"clock","color":"red"}
 scoreboard players set COUNTDOWN_CLOCK clock 100
-tellraw @s {"text":"Sending title message!","color":"gold"}
+
 
 
 #

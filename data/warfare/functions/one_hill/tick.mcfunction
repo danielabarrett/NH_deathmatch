@@ -61,5 +61,5 @@ execute as @e[type=armor_stand,name="hill"] at @e[type=armor_stand,name="hill"] 
 # loadout select
 #
 
-execute as @a unless score @s loadout_view = @s loadout_select run function warfare:one_hill/loadouts/update
+execute as @a[scores={loadout_equip=1..}] run function warfare:one_hill/loadouts/equip_current
 
