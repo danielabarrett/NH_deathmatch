@@ -63,6 +63,6 @@ execute as @a[team=BLUE,scores={president=1}] run function warfare:president/loa
 # 3 - protect the president
 # 4 - kill the bunny
 # 5 - king of the hill
-# 6 - two hills
+# 6 - two zones
 #
 scoreboard players set gamemode utility 3

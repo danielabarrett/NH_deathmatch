@@ -32,7 +32,7 @@ scoreboard players set CONST_100 utility 100
 # 3 - protect the president
 # 4 - kill the bunny
 # 5 - king of the hill
-# 6 - two hills
+# 6 - two zones
 #
 
 # scoreboard objectives add utility dummy {"text":"utility_scoreboard","color":"red"}
@@ -59,11 +59,14 @@ scoreboard players set op_respawn_time option 100
 # loadouts
 #
 
-scoreboard objectives add loadout_view trigger
-scoreboard players set @a loadout_view 1
+# scoreboard objectives add loadout_view trigger
+# scoreboard players set @a loadout_view 1
 # scoreboard players enable @a loadout_view
 scoreboard objectives add loadout_select dummy
-scoreboard players set @s loadout_select 1
+scoreboard players set @a loadout_select 1
+
+scoreboard objectives add loadout_equip used:carrot_on_a_stick {"text":"loadout_equip","color":"red"}
+scoreboard players set @a loadout_equip 0
 
 
 #

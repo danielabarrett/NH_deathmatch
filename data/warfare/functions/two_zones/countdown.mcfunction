@@ -20,15 +20,15 @@ team modify RED prefix {"text":"[","color":"dark_gray","extra":[{"text":"RED","c
 team modify BLUE prefix {"text":"[","color":"dark_gray","extra":[{"text":"BLUE","color":"blue"},{"text":"] ","color":"dark_gray"}]}
 team modify RED friendlyFire false
 team modify BLUE friendlyFire false
-function warfare:one_hill/fillteams
+function warfare:two_zones/fillteams
 
 
 #
 # start countdown
 #
 
-bossbar add timer {"text":"King of the Hill","color":"gold"}
-bossbar set timer name {"text":"King of the Hill","color":"gold"}
+bossbar add timer {"text":"Zone Capture","color":"gold"}
+bossbar set timer name {"text":"Zone Capture","color":"gold"}
 bossbar set timer visible true
 bossbar set timer players @a
 bossbar set timer max 100
@@ -45,17 +45,18 @@ tellraw @s {"text":"Sending title message!","color":"gold"}
 
 scoreboard players set @a loadout_view 1
 scoreboard players set @a loadout_select 1
-execute as @a[team=RED] run function warfare:one_hill/loadouts/sel_red_1
-execute as @a[team=BLUE] run function warfare:one_hill/loadouts/sel_blue_1
+execute as @a[team=RED] run function warfare:two_zones/loadouts/sel_red_1
+execute as @a[team=BLUE] run function warfare:two_zones/loadouts/sel_blue_1
 
 
 #
-# hills
+# zones
 #
 
-scoreboard players set @e[type=armor_stand,name="hill"] utility 0
-execute as @e[type=armor_stand,name="hill"] at @e[type=armor_stand,name="hill"] run function warfare:one_hill/hill/spawn_border
-# execute as @e[type=armor_stand,name="hill_border"] at @e[type=armor_stand,name="hill_border"] run tp @s ~ ~ ~ facing entity @e[type=armor_stand,name="hill",limit=1]
+scoreboard players set @e[type=armor_stand,name="zone_a"] utility 0
+execute as @e[type=armor_stand,name="zone_a"] at @e[type=armor_stand,name="zone_a"] run function warfare:two_zones/zone/spawn_border_a
+scoreboard players set @e[type=armor_stand,name="zone_b"] utility 0
+execute as @e[type=armor_stand,name="zone_b"] at @e[type=armor_stand,name="zone_b"] run function warfare:two_zones/zone/spawn_border_b
 
 
 #
@@ -67,4 +68,4 @@ execute as @e[type=armor_stand,name="hill"] at @e[type=armor_stand,name="hill"] 
 # 5 - king of the hill
 # 6 - two zones
 #
-scoreboard players set gamemode utility 5
+scoreboard players set gamemode utility 6

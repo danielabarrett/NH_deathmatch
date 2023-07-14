@@ -62,6 +62,6 @@ execute as @a[team=RABBIT] run function warfare:ffa/loadouts/sel_rabbit_1
 # 3 - protect the president
 # 4 - kill the bunny
 # 5 - king of the hill
-# 6 - two hills
+# 6 - two zones
 #
 scoreboard players set gamemode utility 4

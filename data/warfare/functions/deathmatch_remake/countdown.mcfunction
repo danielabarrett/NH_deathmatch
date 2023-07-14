@@ -5,6 +5,17 @@ function warfare:_global/reset
 
 
 #
+# reset players
+#
+
+# kill @a
+execute as @e[type=armor_stand,name="spawn_red"] run tp @a[team=RED] ~ ~100 ~
+execute as @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~100 ~
+# clear @a
+effect give @a levitation infinite 255 true
+
+
+#
 # teams
 #
 
@@ -43,10 +54,13 @@ tellraw @s {"text":"Sending title message!","color":"gold"}
 # loadouts
 #
 
-scoreboard players set @a loadout_view 1
 scoreboard players set @a loadout_select 1
-execute as @a[team=RED] run function warfare:deathmatch_remake/loadouts/sel_red_1
-execute as @a[team=BLUE] run function warfare:deathmatch_remake/loadouts/sel_blue_1
+execute as @a run function warfare:deathmatch_remake/loadouts/choose
+
+# scoreboard players set @a loadout_view 1
+# scoreboard players set @a loadout_select 1
+# execute as @a[team=RED] run function warfare:deathmatch_remake/loadouts/sel_red_1
+# execute as @a[team=BLUE] run function warfare:deathmatch_remake/loadouts/sel_blue_1
 
 
 #
@@ -56,6 +70,6 @@ execute as @a[team=BLUE] run function warfare:deathmatch_remake/loadouts/sel_blu
 # 3 - protect the president
 # 4 - kill the bunny
 # 5 - king of the hill
-# 6 - two hills
+# 6 - two zones
 #
 scoreboard players set gamemode utility 1
