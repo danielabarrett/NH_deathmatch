@@ -55,7 +55,7 @@ scoreboard players set COUNTDOWN_CLOCK clock 100
 #
 
 scoreboard players set @a loadout_select 1
-execute as @a run function warfare:deathmatch/loadouts/choose
+execute as @a run function warfare:two_zones/loadouts/choose
 
 
 #
