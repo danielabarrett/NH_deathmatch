@@ -57,4 +57,4 @@ execute if score second_detector clock matches 2 run function warfare:one_rabbit
 # loadout select
 #
 
-execute as @a unless score @s loadout_view = @s loadout_select run function warfare:one_rabbit/loadouts/update
+execute as @a[scores={loadout_equip=1..}] run function warfare:one_rabbit/loadouts/equip_current
