@@ -1,4 +1,5 @@
 scoreboard players set gamemode utility 0
+scoreboard players set @a utility 0
 bossbar remove zone_a
 bossbar remove zone_b
 bossbar set timer visible false

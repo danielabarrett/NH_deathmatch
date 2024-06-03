@@ -1,0 +1,12 @@
+kill @e[type=armor_stand,name="spawn_red"]
+kill @e[type=armor_stand,name="spawn_blue"]
+kill @e[type=armor_stand,name="respawn_red"]
+kill @e[type=armor_stand,name="respawn_blue"]
+kill @e[type=armor_stand,name="flagstand_red"]
+kill @e[type=armor_stand,name="flagstand_blue"]
+kill @e[type=armor_stand,name="spawn_neutral"]
+kill @e[type=armor_stand,name="spawn_rabbit"]
+kill @e[type=armor_stand,name="hill"]
+kill @e[type=armor_stand,name="zone_a"]
+kill @e[type=armor_stand,name="zone_b"]
+

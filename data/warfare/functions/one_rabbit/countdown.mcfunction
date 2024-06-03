@@ -14,6 +14,7 @@ execute as @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~100 ~
 execute as @e[type=armor_stand,name="spawn_rabbit",limit=1,sort=arbitrary] run tp @a[team=RABBIT] ~ ~100 ~
 # clear @a
 effect give @a levitation infinite 255 true
+effect give @a invisibility infinite 1 true
 
 
 #
@@ -36,6 +37,9 @@ team modify RABBIT prefix {"text":"[","color":"dark_gray","extra":[{"text":"RABB
 team modify RED friendlyFire false
 team modify BLUE friendlyFire false
 team modify RABBIT friendlyFire false
+team modify RED nametagVisibility hideForOtherTeams
+team modify BLUE nametagVisibility hideForOtherTeams
+team modify RABBIT nametagVisibility hideForOtherTeams
 team join RABBIT @r[team=]
 function warfare:one_rabbit/fillteams
 
@@ -73,5 +77,7 @@ execute as @a[team=!RABBIT] run function warfare:one_rabbit/loadouts/choose
 # 4 - kill the bunny
 # 5 - king of the hill
 # 6 - two zones
+# 7 - free for all
 #
 scoreboard players set gamemode utility 4
+scoreboard players set @a utility 1

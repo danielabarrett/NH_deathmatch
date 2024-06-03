@@ -6,6 +6,7 @@
 #
 
 effect clear @a
+gamemode adventure @a
 # execute as @a[scores={loadout_select=1,president=0},team=RED] run function warfare:deathmatch/loadouts/get_red_1
 # execute as @a[scores={loadout_select=2,president=0},team=RED] run function warfare:deathmatch/loadouts/get_red_2
 # execute as @a[scores={loadout_select=1,president=0},team=BLUE] run function warfare:deathmatch/loadouts/get_blue_1

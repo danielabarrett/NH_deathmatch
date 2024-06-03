@@ -19,6 +19,7 @@
 #
 
 scoreboard objectives add utility dummy {"text":"utility","color":"red"}
+scoreboard players set CONST_3 utility 3
 scoreboard players set CONST_5 utility 5
 scoreboard players set CONST_10 utility 10
 scoreboard players set CONST_20 utility 20
@@ -33,6 +34,7 @@ scoreboard players set CONST_100 utility 100
 # 4 - kill the bunny
 # 5 - king of the hill
 # 6 - two zones
+# 7 - free for all
 #
 
 # scoreboard objectives add utility dummy {"text":"utility_scoreboard","color":"red"}
@@ -40,6 +42,7 @@ scoreboard players set CONST_100 utility 100
 
 
 gamerule maxCommandChainLength 65536
+gamerule showDeathMessages false
 
 
 #

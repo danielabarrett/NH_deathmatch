@@ -1,9 +1,9 @@
 clear @s
 # armor
-item replace entity @s armor.head with leather_helmet{Enchantments:[{id:"unbreaking",lvl:3}],display:{color:12341328}}
-item replace entity @s armor.chest with leather_chestplate{Enchantments:[{id:"unbreaking",lvl:3}],display:{color:12341328}}
-item replace entity @s armor.legs with iron_leggings{Enchantments:[{id:"unbreaking",lvl:3}]}
-item replace entity @s armor.feet with iron_boots{Enchantments:[{id:"unbreaking",lvl:3}]}
+item replace entity @s armor.head with leather_helmet{Enchantments:[{id:"unbreaking",lvl:3},{id:"protection",lvl:3}],display:{color:12341328}}
+item replace entity @s armor.chest with leather_chestplate{Enchantments:[{id:"unbreaking",lvl:3},{id:"protection",lvl:3}],display:{color:12341328}}
+item replace entity @s armor.legs with iron_leggings{Enchantments:[{id:"unbreaking",lvl:3},{id:"protection",lvl:3}]}
+item replace entity @s armor.feet with iron_boots{Enchantments:[{id:"unbreaking",lvl:3},{id:"protection",lvl:3}]}
 # weapons
 item replace entity @s hotbar.0 with additionalguns:akm_custom{Attachments:{Scope:{id:'additionalguns:kobra',Count:1b},Under_Barrel:{id:'cgm:light_grip',Count:1b}}}
 item replace entity @s hotbar.1 with additionalguns:p250

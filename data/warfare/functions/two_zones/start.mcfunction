@@ -5,6 +5,7 @@
 #
 
 effect clear @a
+gamemode adventure @a
 # execute as @a[scores={loadout_select=1},team=RED] run function warfare:two_zones/loadouts/get_red_1
 # execute as @a[scores={loadout_select=2},team=RED] run function warfare:two_zones/loadouts/get_red_2
 # execute as @a[scores={loadout_select=1},team=BLUE] run function warfare:two_zones/loadouts/get_blue_1

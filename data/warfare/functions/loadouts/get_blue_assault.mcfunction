@@ -9,6 +9,7 @@ item replace entity @s hotbar.0 with additionalguns:scar{Attachments:{Under_Barr
 item replace entity @s hotbar.1 with additionalguns:usp
 item replace entity @s hotbar.2 with iron_sword 1
 # ammo
+item replace entity @s container.18 with additionalguns:bullet_long 64
 item replace entity @s container.27 with additionalguns:bullet_long 64
 item replace entity @s container.28 with additionalguns:bullet_short 64
 # support

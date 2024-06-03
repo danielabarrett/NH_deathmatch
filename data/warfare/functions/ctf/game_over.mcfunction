@@ -1,4 +1,5 @@
 scoreboard players set gamemode utility 0
+scoreboard players set @a utility 0
 bossbar set timer visible false
 title @a times 10t 7s 10t
 title @a title {"text":"GAME OVER","color":"yellow"}

@@ -13,6 +13,7 @@ execute as @e[type=armor_stand,name="spawn_red"] run tp @a[team=RED] ~ ~100 ~
 execute as @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~100 ~
 # clear @a
 effect give @a levitation infinite 255 true
+effect give @a invisibility infinite 1 true
 
 
 #
@@ -31,6 +32,8 @@ team modify RED prefix {"text":"[","color":"dark_gray","extra":[{"text":"RED","c
 team modify BLUE prefix {"text":"[","color":"dark_gray","extra":[{"text":"BLUE","color":"blue"},{"text":"] ","color":"dark_gray"}]}
 team modify RED friendlyFire false
 team modify BLUE friendlyFire false
+team modify RED nametagVisibility hideForOtherTeams
+team modify BLUE nametagVisibility hideForOtherTeams
 function warfare:deathmatch_remake/fillteams
 
 
@@ -71,5 +74,7 @@ execute as @a run function warfare:deathmatch_remake/loadouts/choose
 # 4 - kill the bunny
 # 5 - king of the hill
 # 6 - two zones
+# 7 - free for all
 #
 scoreboard players set gamemode utility 1
+scoreboard players set @a utility 1

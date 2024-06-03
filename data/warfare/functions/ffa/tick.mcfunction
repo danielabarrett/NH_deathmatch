@@ -2,9 +2,7 @@
 # check for kills
 #
 
-execute as @a[team=RED,scores={death_detector=1..},nbt={Health:20.0f}] run function warfare:ffa/death_red
-execute as @a[team=BLUE,scores={death_detector=1..},nbt={Health:20.0f}] run function warfare:ffa/death_blue
-execute as @a[team=RABBIT,scores={death_detector=1..},nbt={Health:20.0f}] run function warfare:ffa/death_rabbit
+execute as @a[scores={death_detector=1..},nbt={Health:20.0f}] run function warfare:ffa/death
 
 
 #
@@ -36,10 +34,10 @@ execute as @a[scores={clock=60}] run title @s title {"text":"Respawning in ","co
 execute as @a[scores={clock=40}] run title @s title {"text":"Respawning in ","color":"green","extra":[{"text":"2","color":"red"}]}
 execute as @a[scores={clock=20}] run title @s title {"text":"Respawning in ","color":"green","extra":[{"text":"1","color":"red"}]}
 execute as @a[scores={clock=1..}] run scoreboard players remove @s clock 1
-execute as @a[scores={clock=1},team=RED] run function warfare:ffa/respawn_red
-execute as @a[scores={clock=1},team=BLUE] run function warfare:ffa/respawn_blue
-execute as @a[scores={clock=1},team=RABBIT] run function warfare:ffa/respawn_rabbit
 
+# respawn
+execute as @a[scores={clock=1}] run scoreboard players set @s player_respawning 1
+execute as @a[scores={player_respawning=1}] as @e[type=armor_stand,name="spawn_neutral",limit=1,sort=random] at @s unless entity @a[distance=..5] run function warfare:ffa/respawn
 
 #
 # (every second) update clock
@@ -48,13 +46,13 @@ execute as @a[scores={clock=1},team=RABBIT] run function warfare:ffa/respawn_rab
 scoreboard players operation second_detector clock = GAME_CLOCK clock
 scoreboard players operation second_detector clock %= CONST_20 utility
 execute if score second_detector clock matches 2 run function warfare:ffa/calculate_time_remaining
-scoreboard players operation second_detector clock = GAME_CLOCK clock
-scoreboard players operation second_detector clock %= CONST_60 utility
-execute if score second_detector clock matches 2 run function warfare:ffa/anti_spawn_camp
+# scoreboard players operation second_detector clock = GAME_CLOCK clock
+# scoreboard players operation second_detector clock %= CONST_60 utility
+# execute if score second_detector clock matches 2 run function warfare:ffa/anti_spawn_camp
 
 
 #
 # loadout select
 #
 
-execute as @a unless score @s loadout_view = @s loadout_select run function warfare:ffa/loadouts/update
+execute as @a[scores={loadout_equip=1..}] run function warfare:ffa/loadouts/equip_current
