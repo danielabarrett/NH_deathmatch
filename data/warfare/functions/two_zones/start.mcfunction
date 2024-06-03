@@ -14,8 +14,8 @@ execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="sp
 execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE] ~ ~100 ~
 # execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run tp @a[team=RED] ~ ~ ~ ~ ~
 # execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~ ~ ~ ~
-execute as @a[team=RED] run function warfare:two_zones/respawn_red
-execute as @a[team=BLUE] run function warfare:two_zones/respawn_blue
+execute as @a[team=RED] run function warfare:two_zones/spawn_red
+execute as @a[team=BLUE] run function warfare:two_zones/spawn_blue
 
 
 #

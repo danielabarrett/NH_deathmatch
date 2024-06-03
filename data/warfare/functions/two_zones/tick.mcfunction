@@ -35,8 +35,16 @@ execute as @a[scores={clock=60}] run title @s title {"text":"Respawning in ","co
 execute as @a[scores={clock=40}] run title @s title {"text":"Respawning in ","color":"green","extra":[{"text":"2","color":"red"}]}
 execute as @a[scores={clock=20}] run title @s title {"text":"Respawning in ","color":"green","extra":[{"text":"1","color":"red"}]}
 execute as @a[scores={clock=1..}] run scoreboard players remove @s clock 1
-execute as @a[scores={clock=1},team=RED] run function warfare:two_zones/respawn_red
-execute as @a[scores={clock=1},team=BLUE] run function warfare:two_zones/respawn_blue
+# execute as @a[scores={clock=1},team=RED] run function warfare:two_zones/respawn_red
+# execute as @a[scores={clock=1},team=BLUE] run function warfare:two_zones/respawn_blue
+
+
+# respawn
+execute as @a[scores={clock=1}] run scoreboard players set @s player_respawning 1
+execute as @a[team=RED,scores={player_respawning=1}] as @e[type=armor_stand,name="respawn_red",limit=1,sort=random] at @s unless entity @a[team=!RED,distance=..5] run function warfare:two_zones/respawn_red
+execute as @a[team=BLUE,scores={player_respawning=1}] as @e[type=armor_stand,name="respawn_blue",limit=1,sort=random] at @s unless entity @a[team=!BLUE,distance=..5] run function warfare:two_zones/respawn_blue
+
+
 
 
 #
@@ -48,7 +56,7 @@ scoreboard players operation second_detector clock %= CONST_20 utility
 execute if score second_detector clock matches 2 run function warfare:two_zones/second
 scoreboard players operation second_detector clock = GAME_CLOCK clock
 scoreboard players operation second_detector clock %= CONST_60 utility
-execute if score second_detector clock matches 2 run function warfare:two_zones/anti_spawn_camp
+execute if score second_detector clock matches 2 run function warfare:common/anti_spawn_camp
 # tick zone particles (every 1/2 second)
 scoreboard players operation second_detector clock = GAME_CLOCK clock
 scoreboard players operation second_detector clock %= CONST_10 utility

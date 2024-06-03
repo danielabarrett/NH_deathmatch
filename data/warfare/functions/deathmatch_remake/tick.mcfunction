@@ -48,7 +48,7 @@ scoreboard players operation second_detector clock %= CONST_20 utility
 execute if score second_detector clock matches 2 run function warfare:deathmatch_remake/calculate_time_remaining
 scoreboard players operation second_detector clock = GAME_CLOCK clock
 scoreboard players operation second_detector clock %= CONST_60 utility
-execute if score second_detector clock matches 2 run function warfare:deathmatch_remake/anti_spawn_camp
+execute if score second_detector clock matches 2 run function warfare:common/anti_spawn_camp
 
 
 #

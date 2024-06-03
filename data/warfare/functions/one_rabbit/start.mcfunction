@@ -18,9 +18,9 @@ execute as @e[type=armor_stand,name="spawn_bunny",limit=1,sort=random] at @e[typ
 # execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run tp @a[team=RED] ~ ~ ~ ~ ~
 # execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~ ~ ~ ~
 # execute as @e[type=armor_stand,name="spawn_rabbit",limit=1,sort=random] at @e[type=armor_stand,name="spawn_rabbit",limit=1,sort=random] run tp @a[team=RABBIT] ~ ~ ~ ~ ~
-execute as @a[team=RED] run function warfare:one_rabbit/respawn_red
-execute as @a[team=BLUE] run function warfare:one_rabbit/respawn_blue
-execute as @a[team=RABBIT] run function warfare:one_rabbit/respawn_rabbit
+execute as @a[team=RED] run function warfare:one_rabbit/spawn_red
+execute as @a[team=BLUE] run function warfare:one_rabbit/spawn_blue
+execute as @a[team=RABBIT] run function warfare:one_rabbit/spawn_rabbit
 
 
 #

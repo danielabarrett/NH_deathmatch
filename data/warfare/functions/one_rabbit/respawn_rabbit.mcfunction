@@ -1,3 +1,4 @@
-tp @s @e[type=armor_stand,name="spawn_rabbit",limit=1,sort=random]
-effect clear @s
-function warfare:loadouts/get_rabbit
+tp @p[scores={player_respawning=1}] @s
+execute as @p[scores={player_respawning=1}] at @s run effect clear @s
+execute as @p[scores={player_respawning=1}] at @s run function warfare:loadouts/get_rabbit
+execute as @p[scores={player_respawning=1}] at @s run scoreboard players set @s player_respawning 0
