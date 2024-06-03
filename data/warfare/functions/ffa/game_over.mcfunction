@@ -6,8 +6,7 @@ title @a title {"text":"GAME OVER","color":"yellow"}
 scoreboard players set max_score utility -1
 execute as @a run scoreboard players operation max_score utility > @s killcount
 execute as @a if score @s killcount = max_score utility run tag @s add winner
-title @a title [{"selector":"@a[tag=highest_score]","color":"yellow","bold":true},{"text":" WINS","color":"yellow"}]
-# execute if score RED killcount > BLUE killcount run title @a subtitle {"text":"RED WINS","color":"red"}
-# execute if score RED killcount < BLUE killcount run title @a subtitle {"text":"BLUE WINS","color":"blue"}
+title @a subtitle [{"selector":"@a[tag=winner]","color":"yellow","bold":true},{"text":" WINS","color":"yellow"}]
+tag @a remove winner
 clear @a
 execute as @a at @a run playsound entity.wither.death player @s ~ ~ ~ 1 0.5
