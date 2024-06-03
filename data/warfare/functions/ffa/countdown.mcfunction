@@ -1,4 +1,4 @@
-tellraw @a "checkpoint"
+
 
 # scoreboard players set GAME_CLOCK clock 0
 function warfare:_global/reset
