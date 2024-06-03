@@ -9,3 +9,5 @@ execute if score RED killcount < BLUE killcount run title @a subtitle {"text":"B
 clear @a
 execute as @a[scores={president=1}] run attribute @s generic.max_health base set 20.0
 execute as @a at @a run playsound entity.wither.death player @s ~ ~ ~ 1 0.5
+execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run spawnpoint @a[team=RED] ~ ~ ~
+execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE] ~ ~ ~

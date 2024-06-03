@@ -6,16 +6,10 @@
 
 effect clear @a
 gamemode adventure @a
-# execute as @a[scores={loadout_select=1},team=RED] run function warfare:ctf/loadouts/get_red_1
-# execute as @a[scores={loadout_select=2},team=RED] run function warfare:ctf/loadouts/get_red_2
-# execute as @a[scores={loadout_select=1},team=BLUE] run function warfare:ctf/loadouts/get_blue_1
-# execute as @a[scores={loadout_select=2},team=BLUE] run function warfare:ctf/loadouts/get_blue_2
 execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run spawnpoint @a[team=RED] ~ ~100 ~
 execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE] ~ ~100 ~
-# execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run tp @a[team=RED] ~ ~ ~ ~ ~
-# execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~ ~ ~ ~
-execute as @a[team=RED] run function warfare:ctf/respawn_red
-execute as @a[team=BLUE] run function warfare:ctf/respawn_blue
+execute as @a[team=RED] run function warfare:common/spawn_red
+execute as @a[team=BLUE] run function warfare:common/spawn_blue
 
 
 #
@@ -52,7 +46,6 @@ scoreboard players set reset_blue clock 0
 # start timer
 #
 
-# scoreboard players set GAME_CLOCK clock 12000
 scoreboard players operation GAME_CLOCK clock = op_time_limit option
 function warfare:ctf/second
 execute store result bossbar timer max run scoreboard players get GAME_CLOCK clock

@@ -34,7 +34,7 @@ team modify RED friendlyFire false
 team modify BLUE friendlyFire false
 team modify RED nametagVisibility hideForOtherTeams
 team modify BLUE nametagVisibility hideForOtherTeams
-function warfare:president/fillteams
+function warfare:common/fillteams
 
 scoreboard objectives add president dummy {"text":"president","color":"red"}
 scoreboard players set @a president 0

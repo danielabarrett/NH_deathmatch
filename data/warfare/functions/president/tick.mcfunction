@@ -41,8 +41,8 @@ execute as @a[scores={clock=1..}] run scoreboard players remove @s clock 1
 
 # respawn
 execute as @a[scores={clock=1}] run scoreboard players set @s player_respawning 1
-execute as @a[team=RED,scores={player_respawning=1}] as @e[type=armor_stand,name="respawn_red",limit=1,sort=random] at @s unless entity @a[team=!RED,distance=..5] run function warfare:president/respawn_red
-execute as @a[team=BLUE,scores={player_respawning=1}] as @e[type=armor_stand,name="respawn_blue",limit=1,sort=random] at @s unless entity @a[team=!BLUE,distance=..5] run function warfare:president/respawn_blue
+execute as @a[team=RED,scores={player_respawning=1}] as @e[type=armor_stand,name="respawn_red",limit=1,sort=random] at @s unless entity @a[team=!RED,distance=..5] run function warfare:common/respawn_red
+execute as @a[team=BLUE,scores={player_respawning=1}] as @e[type=armor_stand,name="respawn_blue",limit=1,sort=random] at @s unless entity @a[team=!BLUE,distance=..5] run function warfare:common/respawn_blue
 
 
 
@@ -52,7 +52,7 @@ execute as @a[team=BLUE,scores={player_respawning=1}] as @e[type=armor_stand,nam
 
 scoreboard players operation second_detector clock = GAME_CLOCK clock
 scoreboard players operation second_detector clock %= CONST_20 utility
-execute if score second_detector clock matches 2 run function warfare:president/calculate_time_remaining
+execute if score second_detector clock matches 2 run function warfare:common/calculate_time_remaining
 scoreboard players operation second_detector clock = GAME_CLOCK clock
 scoreboard players operation second_detector clock %= CONST_60 utility
 execute if score second_detector clock matches 2 run function warfare:common/anti_spawn_camp

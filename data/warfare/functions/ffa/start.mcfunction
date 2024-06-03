@@ -45,7 +45,7 @@ scoreboard players set @a player_respawning 1
 
 # scoreboard players set GAME_CLOCK clock 12000
 scoreboard players operation GAME_CLOCK clock = op_time_limit option
-function warfare:ffa/calculate_time_remaining
+function warfare:common/calculate_time_remaining
 execute store result bossbar timer max run scoreboard players get GAME_CLOCK clock
 
 

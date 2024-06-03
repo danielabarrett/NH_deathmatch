@@ -45,7 +45,7 @@ execute as @a[scores={player_respawning=1}] as @e[type=armor_stand,name="spawn_n
 
 scoreboard players operation second_detector clock = GAME_CLOCK clock
 scoreboard players operation second_detector clock %= CONST_20 utility
-execute if score second_detector clock matches 2 run function warfare:ffa/calculate_time_remaining
+execute if score second_detector clock matches 2 run function warfare:common/calculate_time_remaining
 
 #
 # loadout select

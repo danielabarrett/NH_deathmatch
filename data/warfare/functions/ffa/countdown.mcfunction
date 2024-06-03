@@ -37,7 +37,7 @@ team leave @a
 # team modify BLUE friendlyFire false
 # team modify RABBIT friendlyFire false
 # team join RABBIT @r[team=]
-# function warfare:ffa/fillteams
+# function warfare:common/fillteams
 
 
 #

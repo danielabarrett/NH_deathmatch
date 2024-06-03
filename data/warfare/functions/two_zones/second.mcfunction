@@ -1,5 +1,5 @@
 
-function warfare:two_zones/second/calculate_time_remaining
+function warfare:common/calculate_time_remaining
 
 #
 # zone mechanics

@@ -41,7 +41,7 @@ team modify RED nametagVisibility hideForOtherTeams
 team modify BLUE nametagVisibility hideForOtherTeams
 team modify RABBIT nametagVisibility hideForOtherTeams
 team join RABBIT @r[team=]
-function warfare:one_rabbit/fillteams
+function warfare:common/fillteams
 
 
 #

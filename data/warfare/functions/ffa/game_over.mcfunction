@@ -10,3 +10,4 @@ title @a subtitle [{"selector":"@a[tag=winner]","color":"yellow","bold":true},{"
 tag @a remove winner
 clear @a
 execute as @a at @a run playsound entity.wither.death player @s ~ ~ ~ 1 0.5
+execute as @e[type=armor_stand,name="spawn_neutral",limit=1,sort=arbitrary] at @s run spawnpoint @a ~ ~ ~

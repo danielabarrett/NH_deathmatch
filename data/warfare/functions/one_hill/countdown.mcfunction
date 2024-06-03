@@ -34,7 +34,7 @@ team modify RED friendlyFire false
 team modify BLUE friendlyFire false
 team modify RED nametagVisibility hideForOtherTeams
 team modify BLUE nametagVisibility hideForOtherTeams
-function warfare:one_hill/fillteams
+function warfare:common/fillteams
 
 
 #

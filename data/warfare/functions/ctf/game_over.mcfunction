@@ -8,3 +8,5 @@ execute if score RED flagcount > BLUE flagcount run title @a subtitle {"text":"R
 execute if score RED flagcount < BLUE flagcount run title @a subtitle {"text":"BLUE WINS","color":"blue"}
 clear @a
 execute as @a at @a run playsound entity.wither.death player @s ~ ~ ~ 1 0.5
+execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run spawnpoint @a[team=RED] ~ ~ ~
+execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE] ~ ~ ~

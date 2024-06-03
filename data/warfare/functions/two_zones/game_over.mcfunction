@@ -12,3 +12,5 @@ clear @a
 execute as @a at @a run playsound entity.wither.death player @s ~ ~ ~ 1 0.5
 kill @e[type=armor_stand,name="zone_border_a"]
 kill @e[type=armor_stand,name="zone_border_b"]
+execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run spawnpoint @a[team=RED] ~ ~ ~
+execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE] ~ ~ ~

@@ -6,18 +6,10 @@
 
 effect clear @a
 gamemode adventure @a
-# execute as @a[scores={loadout_select=1},team=RED] run function warfare:deathmatch/loadouts/get_red_1
-# execute as @a[scores={loadout_select=2},team=RED] run function warfare:deathmatch/loadouts/get_red_2
-# execute as @a[scores={loadout_select=1},team=BLUE] run function warfare:deathmatch/loadouts/get_blue_1
-# execute as @a[scores={loadout_select=2},team=BLUE] run function warfare:deathmatch/loadouts/get_blue_2
 execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run spawnpoint @a[team=RED] ~ ~100 ~
 execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE] ~ ~100 ~
-execute as @e[team=RED] run function warfare:deathmatch/spawn_red
-execute as @e[team=BLUE] run function warfare:deathmatch/spawn_blue
-# execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="spawn_red"] run function warfare:deathmatch/spawn_red
-# execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run function warfare:deathmatch/spawn_blue
-# execute as @a[team=RED] run function warfare:deathmatch/respawn_red
-# execute as @a[team=BLUE] run function warfare:deathmatch/respawn_blue
+execute as @e[team=RED] run function warfare:common/spawn_red
+execute as @e[team=BLUE] run function warfare:common/spawn_blue
 
 
 #
@@ -43,9 +35,8 @@ scoreboard players set BLUE killcount 0
 # start timer
 #
 
-# scoreboard players set GAME_CLOCK clock 12000
 scoreboard players operation GAME_CLOCK clock = op_time_limit option
-function warfare:deathmatch/calculate_time_remaining
+function warfare:common/calculate_time_remaining
 execute store result bossbar timer max run scoreboard players get GAME_CLOCK clock
 
 
