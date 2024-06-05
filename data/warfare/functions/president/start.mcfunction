@@ -31,6 +31,9 @@ scoreboard objectives add killcount dummy {"text":"Protect the President","color
 scoreboard objectives setdisplay sidebar killcount
 scoreboard players set @a[scores={president=1}] killcount 0
 
+scoreboard objectives add player_respawning dummy {"text":"player_respawning","color":"red"}
+scoreboard players set @a player_respawning 1
+
 
 #
 # start timer

@@ -30,6 +30,9 @@ scoreboard players enable BLUE killcount
 scoreboard players set RED killcount 0
 scoreboard players set BLUE killcount 0
 
+scoreboard objectives add player_respawning dummy {"text":"player_respawning","color":"red"}
+scoreboard players set @a player_respawning 1
+
 
 
 #

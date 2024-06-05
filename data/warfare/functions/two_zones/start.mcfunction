@@ -25,6 +25,9 @@ scoreboard objectives setdisplay sidebar points
 scoreboard players set RED points 0
 scoreboard players set BLUE points 0
 
+scoreboard objectives add player_respawning dummy {"text":"player_respawning","color":"red"}
+scoreboard players set @a player_respawning 1
+
 scoreboard players set ZONE_A utility 0
 scoreboard players set ZONE_B utility 0
 

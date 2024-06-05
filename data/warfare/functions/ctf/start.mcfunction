@@ -38,6 +38,9 @@ scoreboard players set BLUE flagcount 0
 scoreboard objectives add flagholder dummy {"text":"flagholder","color":"red"}
 scoreboard players set @a flagholder 0
 
+scoreboard objectives add player_respawning dummy {"text":"player_respawning","color":"red"}
+scoreboard players set @a player_respawning 1
+
 scoreboard players set reset_red clock 0
 scoreboard players set reset_blue clock 0
 
