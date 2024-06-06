@@ -21,23 +21,11 @@ effect give @a invisibility infinite 1 true
 
 
 team leave @a
-# execute if score op_shuffle_teams option matches 1 run team leave @a
-# execute if score op_shuffle_teams option matches 1 run team remove RED
-# execute if score op_shuffle_teams option matches 1 run team remove BLUE
-# team add RED {"text":"RED","color":"red"}
-# team add BLUE {"text":"BLUE","color":"blue"}
-# team add RABBIT {"text":"RABBIT","color":"dark_gray"}
-# team modify RED nametagVisibility hideForOtherTeams
-# team modify BLUE nametagVisibility hideForOtherTeams
-# team modify RABBIT nametagVisibility hideForOtherTeams
-# team modify RED prefix {"text":"[","color":"dark_gray","extra":[{"text":"RED","color":"red"},{"text":"] ","color":"dark_gray"}]}
-# team modify BLUE prefix {"text":"[","color":"dark_gray","extra":[{"text":"BLUE","color":"blue"},{"text":"] ","color":"dark_gray"}]}
-# team modify RABBIT prefix {"text":"[","color":"dark_gray","extra":[{"text":"RABBIT","color":"white"},{"text":"] ","color":"dark_gray"}]}
-# team modify RED friendlyFire false
-# team modify BLUE friendlyFire false
-# team modify RABBIT friendlyFire false
-# team join RABBIT @r[team=]
-# function warfare:common/fillteams
+team remove NEUTRAL
+team add NEUTRAL
+team modify NEUTRAL nametagVisibility never
+team modify NEUTRAL friendlyFire true
+team join NEUTRAL @a
 
 
 #

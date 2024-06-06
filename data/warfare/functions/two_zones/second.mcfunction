@@ -31,7 +31,7 @@ execute if score ZONE_A utility matches 2 if score ZONE_A zone_red_players match
 execute if score ZONE_B utility matches 2 if score ZONE_B zone_red_players matches 0 if score ZONE_B zone_blue_players matches 1 if score ZONE_B zone_progress matches 0..9 run scoreboard players add ZONE_B zone_progress 1
 
 # revert to neutral
-execute if score zone_a zone_progress matches 0 as @e[type=armor_stand,name="zone_a"] run function warfare:two_zones/zone/control_neutral
+execute if score ZONE_A zone_progress matches 0 as @e[type=armor_stand,name="zone_a"] run function warfare:two_zones/zone/control_neutral
 execute if score ZONE_B zone_progress matches 0 as @e[type=armor_stand,name="zone_b"] run function warfare:two_zones/zone/control_neutral
 
 
