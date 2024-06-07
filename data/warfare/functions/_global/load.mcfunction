@@ -19,6 +19,7 @@
 #
 
 scoreboard objectives add utility dummy {"text":"utility","color":"red"}
+scoreboard players set CONST_1 utility 1
 scoreboard players set CONST_3 utility 3
 scoreboard players set CONST_5 utility 5
 scoreboard players set CONST_10 utility 10
