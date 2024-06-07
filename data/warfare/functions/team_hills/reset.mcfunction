@@ -6,3 +6,4 @@ scoreboard players reset BLUE killcount
 scoreboard objectives remove points
 
 kill @e[type=armor_stand,name="hill_border"]
+kill @e[type=armor_stand,name="active_hill"]

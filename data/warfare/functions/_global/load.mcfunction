@@ -56,6 +56,8 @@ scoreboard players set op_shuffle_teams option 1
 scoreboard players set op_time_limit option 12000
 scoreboard players set op_countdown_time option 100
 scoreboard players set op_respawn_time option 100
+scoreboard players set second_detector clock 0
+scoreboard players set minute_detector clock 0
 
 
 #

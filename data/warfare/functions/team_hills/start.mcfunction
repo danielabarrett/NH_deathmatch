@@ -34,7 +34,7 @@ scoreboard players set @a player_respawning 1
 #
 
 scoreboard players operation GAME_CLOCK clock = op_time_limit option
-function warfare:king_of_the_hill/second
+function warfare:team_hills/second
 execute store result bossbar timer max run scoreboard players get GAME_CLOCK clock
 
 title @a times 10t 1s 10t
