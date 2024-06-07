@@ -4,4 +4,4 @@ clear @s
 effect give @s levitation infinite 255 true
 effect give @s invisibility infinite 1 true
 scoreboard players operation @s clock = op_respawn_time option
-function warfare:one_hill/loadouts/choose
+function warfare:king_of_the_hill/loadouts/choose

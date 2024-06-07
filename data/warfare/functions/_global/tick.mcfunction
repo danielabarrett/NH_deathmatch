@@ -6,7 +6,7 @@ execute if score gamemode utility matches 1 run function warfare:deathmatch/tick
 execute if score gamemode utility matches 2 run function warfare:ctf/tick
 execute if score gamemode utility matches 3 run function warfare:president/tick
 execute if score gamemode utility matches 4 run function warfare:one_rabbit/tick
-execute if score gamemode utility matches 5 run function warfare:one_hill/tick
+execute if score gamemode utility matches 5 run function warfare:king_of_the_hill/tick
 execute if score gamemode utility matches 6 run function warfare:two_zones/tick
 execute if score gamemode utility matches 7 run function warfare:ffa/tick
 
@@ -28,4 +28,4 @@ execute if score gamemode utility matches 0 run function warfare:_global/show_po
 
 
 #temp
-# function warfare:one_hill/hill/border_particles_gray
+# function warfare:king_of_the_hill/hill/border_particles_gray
