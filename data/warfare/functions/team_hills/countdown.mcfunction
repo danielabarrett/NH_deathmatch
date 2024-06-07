@@ -66,7 +66,7 @@ execute as @a run function warfare:team_hills/loadouts/choose
 #
 
 scoreboard players set @e[type=armor_stand,name="hill"] utility 0
-execute as @e[type=armor_stand,name="hill"] at @e[type=armor_stand,name="hill"] run function warfare:team_hills/hill/spawn_border
+# execute as @e[type=armor_stand,name="hill"] at @e[type=armor_stand,name="hill"] run function warfare:team_hills/hill/spawn_border
 # execute as @e[type=armor_stand,name="hill_border"] at @e[type=armor_stand,name="hill_border"] run tp @s ~ ~ ~ facing entity @e[type=armor_stand,name="hill",limit=1]
 
 
