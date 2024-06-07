@@ -34,7 +34,8 @@ scoreboard players set @a player_respawning 1
 #
 
 execute as @e[type=armor_stand,name="hill",limit=1,sort=arbitrary] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:'"active_hill"'}
-function warfare:team_hills/hill/new_hill_init
+# team_hills/second takes care of the actual initialization of the first hill once the timer has been set
+# function warfare:team_hills/hill/new_hill_init
 
 
 #
