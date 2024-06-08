@@ -10,6 +10,7 @@ execute as @e[type=armor_stand,name="spawn_red"] at @e[type=armor_stand,name="sp
 execute as @e[type=armor_stand,name="spawn_blue"] at @e[type=armor_stand,name="spawn_blue"] run spawnpoint @a[team=BLUE] ~ ~100 ~
 execute as @a[team=RED] run function warfare:common/spawn_red
 execute as @a[team=BLUE] run function warfare:common/spawn_blue
+execute as @a run function warfare:team_hills/get_hill_tracker
 
 
 #

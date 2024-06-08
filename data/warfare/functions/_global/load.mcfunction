@@ -1,20 +1,4 @@
 #
-# reset stuff
-# 
-
-# scoreboard players set GAME_CLOCK clock 0
-# scoreboard players set COUNTDOWN_CLOCK clock 0
-# scoreboard players set RED killcount 0
-# scoreboard players set BLUE killcount 0
-
-# bossbar set timer visible false
-# bossbar set timer name {"text":"Warfare!","color":"gold","bold":true}
-
-# function warfare:_global/reset
-
-
-
-#
 # prepare constants
 #
 
@@ -81,3 +65,10 @@ scoreboard players set @a loadout_equip 0
 
 scoreboard objectives add health health {"text":"♥","color":"red"}
 scoreboard objectives setdisplay belowName health
+
+#
+# Reset games
+# 
+
+# function warfare:_global/reset
+# TODO: uncomment for release

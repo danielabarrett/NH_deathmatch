@@ -7,3 +7,4 @@ function warfare:team_hills/hill/spawn_border
 
 # players
 tellraw @a {"text":"The Hill has Moved!", "color":"green"}
+execute as @a[scores={clock=0}] run function warfare:team_hills/get_hill_tracker

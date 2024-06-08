@@ -4,6 +4,7 @@ function warfare:president/reset
 function warfare:one_rabbit/reset
 function warfare:team_hills/reset
 function warfare:two_zones/reset
+function warfare:ffa/reset
 
 bossbar set timer visible false
 
