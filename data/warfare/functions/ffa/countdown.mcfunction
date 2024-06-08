@@ -9,7 +9,7 @@ function warfare:_global/reset
 #
 
 # kill @a
-execute as @e[type=armor_stand,name="spawn_neutral",limit=1,sort=arbitrary] run tp @a ~ ~100 ~
+execute as @e[type=armor_stand,name="spawn_neutral",limit=1,sort=random] run tp @a ~ ~100 ~
 # clear @a
 effect give @a levitation infinite 255 true
 effect give @a invisibility infinite 1 true

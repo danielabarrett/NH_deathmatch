@@ -11,7 +11,7 @@ function warfare:_global/reset
 # kill @a
 execute as @e[type=armor_stand,name="spawn_red"] run tp @a[team=RED] ~ ~100 ~
 execute as @e[type=armor_stand,name="spawn_blue"] run tp @a[team=BLUE] ~ ~100 ~
-execute as @e[type=armor_stand,name="spawn_rabbit",limit=1,sort=arbitrary] run tp @a[team=RABBIT] ~ ~100 ~
+execute as @e[type=armor_stand,name="spawn_rabbit",limit=1,sort=random] run tp @a[team=RABBIT] ~ ~100 ~
 # clear @a
 effect give @a levitation infinite 255 true
 effect give @a invisibility infinite 1 true

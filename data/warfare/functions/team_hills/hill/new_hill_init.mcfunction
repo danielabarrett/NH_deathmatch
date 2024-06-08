@@ -1,1 +1,1 @@
-execute as @e[type=armor_stand,name="active_hill"] at @s as @e[type=armor_stand,name="hill",distance=10..,limit=1,sort=arbitrary] at @s run function warfare:team_hills/hill/new_hill_util
+execute as @e[type=armor_stand,name="active_hill"] at @s as @e[type=armor_stand,name="hill",distance=10..,limit=1,sort=random] at @s run function warfare:team_hills/hill/new_hill_util
