@@ -35,8 +35,6 @@ execute as @a[scores={clock=60}] run title @s title {"text":"Respawning in ","co
 execute as @a[scores={clock=40}] run title @s title {"text":"Respawning in ","color":"green","extra":[{"text":"2","color":"red"}]}
 execute as @a[scores={clock=20}] run title @s title {"text":"Respawning in ","color":"green","extra":[{"text":"1","color":"red"}]}
 execute as @a[scores={clock=1..}] run scoreboard players remove @s clock 1
-# execute as @a[scores={clock=1},team=RED] run function warfare:president/respawn_red
-# execute as @a[scores={clock=1},team=BLUE] run function warfare:president/respawn_blue
 
 
 # respawn
