@@ -10,6 +10,7 @@ scoreboard players set CONST_10 utility 10
 scoreboard players set CONST_20 utility 20
 scoreboard players set CONST_60 utility 60
 scoreboard players set CONST_100 utility 100
+scoreboard players set CONST_180 utility 180
 
 #
 # prepare gamemodes

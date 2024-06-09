@@ -10,7 +10,7 @@ execute as @e[type=armor_stand,name="active_hill"] at @e[type=armor_stand,name="
 
 scoreboard players operation minute_detector clock = GAME_CLOCK clock
 scoreboard players operation minute_detector clock /= CONST_20 utility
-scoreboard players operation minute_detector clock %= CONST_60 utility
+scoreboard players operation minute_detector clock %= CONST_180 utility
 
 execute if score GAME_CLOCK_MINUTES clock >= CONST_1 utility if score minute_detector clock matches 30 run tellraw @a {"text":"The Hill moves in 30 seconds!","color":"gold"}
 execute if score GAME_CLOCK_MINUTES clock >= CONST_1 utility if score minute_detector clock matches 10 run tellraw @a {"text":"The Hill moves in 10 seconds!","color":"red"}
