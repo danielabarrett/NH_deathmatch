@@ -1,3 +1,8 @@
+# killed by other team
+execute if entity @p[team=RED,scores={kill_detector=1..}] run tellraw @a [{"selector":"@s"},{"text":" was killed by "},{"selector":"@a[team=RED,scores={kill_detector=1}]"}]
+# other death
+execute unless entity @p[team=RED,scores={kill_detector=1..}] run tellraw @a [{"selector":"@s"},{"text":" died"}]
+
 scoreboard players set @s death_detector 0
 scoreboard players add @a[scores={president=1},team=RED] killcount 1
 
